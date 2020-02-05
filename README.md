@@ -12,7 +12,7 @@ Algorithms already available:
 
 .Dynamic Proghramming:
 
-.Recursive Algorithms:
+.Recursive Algorithms: \n
       -Quick Sort
 
 .Greedy Algorithms
