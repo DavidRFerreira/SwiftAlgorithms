@@ -3,16 +3,17 @@ A collection of different algorithms written in Swift.
 
 
 
-******************************************************
-Algorithms already available:
+## Algorithms already available:
 
-.Search Algorithms:
+- ###### Search Algorithms:
+  - Linear Search
+  - Binary Search
 
-.Sorting Algorithms:
+- ###### Sorting Algorithms:
 
-.Dynamic Proghramming:
+- ###### Dynamic Proghramming:
 
-.Recursive Algorithms:
-      -Quick Sort
+- ###### Recursive Algorithms:
+  - Quick Sort
 
-.Greedy Algorithms
+- ###### Greedy Algorithms:
