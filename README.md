@@ -10,10 +10,10 @@ A collection of different algorithms written in Swift.
   - Binary Search
 
 - ###### Sorting Algorithms:
-
+  - Quick Sort
+  
 - ###### Dynamic Proghramming:
 
 - ###### Recursive Algorithms:
-  - Quick Sort
 
 - ###### Greedy Algorithms:
