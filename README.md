@@ -5,11 +5,11 @@ A collection of different algorithms written in Swift.
 
 ## Algorithms already available:
 
-- ###### Search Algorithms:
+- ###### Search Algorithms:(./searchAlgorithms/)
   - Linear Search
   - Binary Search
 
-- ###### Sorting Algorithms:
+- ###### Sorting Algorithms:(./sortingAlgorithms)
   - Quick Sort
   
 - ###### Dynamic Proghramming:
