@@ -44,7 +44,6 @@ func quickSort(numbers: inout[Int], low: Int, high: Int)
         let pivot : Int = numbers[high]
         var i : Int = (low - 1)
         var j : Int = low
-        var numTemp : Int = 0
         
         repeat
         {
@@ -53,24 +52,31 @@ func quickSort(numbers: inout[Int], low: Int, high: Int)
             {
                 i = i + 1
                 
-                numTemp = numbers[i]
-                numbers[i] = numbers[j]
-                numbers[j] = numTemp
+                swap(numbers: &numbers, firstIndex: i, secondIndex: j)
             }
             
             j = j + 1
             
         } while (j <= high - 1)
         
-        numTemp = numbers[i + 1]
-        numbers[i + 1] = numbers[high]
-        numbers[high] = numTemp
+        swap(numbers: &numbers, firstIndex: i+1, secondIndex: high)
         
         partitionIndex = i + 1
         
         quickSort(numbers: &numbers, low: low, high: partitionIndex - 1) // the numbers smaller than the partioning index.
         quickSort(numbers: &numbers, low: partitionIndex + 1, high: high) // the numbers greater than the partioning index.
     }
+}
+
+
+func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
+{
+    var numTemp : Int = 0
+    
+    numTemp = numbers[firstIndex]
+    numbers[firstIndex] = numbers[secondIndex]
+    numbers[secondIndex] = numTemp
+    
 }
 
 
