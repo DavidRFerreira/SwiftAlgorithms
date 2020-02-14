@@ -16,5 +16,6 @@ A collection of different algorithms written in Swift.
 - ###### [Recursive Algorithms:](https://github.com/DavidRFerreira/SwiftAlgorithms/tree/master/recursiveAlgorithms)
   - Fibonacci Number
   - Factorial
+  - Exponential
   
 - ###### Greedy Algorithms:
