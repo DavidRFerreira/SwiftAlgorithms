@@ -1,9 +1,9 @@
 // Bubble Sort Algorithm.
 
 /*
- It picks elements one by one and compares them with the elements before them in the array. By doing that, if the element selected is smaller
- than an element before him, it is moved to the left. So, this algorithms places the elements selected to the right position where it belongs
- in the sorted array.
+This algorithm starts by comparing the first and second element of the array 
+and if the first is greater than the second element, it will swap both elements.
+Then, it compares the second and third element, and so on...
  */
 
 import Foundation
