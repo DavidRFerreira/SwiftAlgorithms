@@ -14,19 +14,13 @@ var partitionIndex: Int = 0
 
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
-    for i in 0...sizeArray-1
-    {
-        numbers[i] = Int.random(in: 0..<3000)
-    }
+    for i in 0...sizeArray-1 { numbers[i] = Int.random(in: 0..<3000) }
 }
 
 
 func printArrayNumbers(numbers: [Int])
 {
-    for number in numbers
-    {
-        print(number)
-    }
+    for number in numbers { print(numbers) }
 }
 
 
@@ -35,10 +29,10 @@ func selectionSort(numbers: inout[Int])
     var smallestElementIndex : Int
     
     for i in 0..<numbers.count - 1
-    {
-        
+    { 
         smallestElementIndex = i
         
+        // It's going to search for the smallest element still not sorted.
         for j in i+1..<numbers.count
         {
             if (numbers[j] < numbers[smallestElementIndex])
@@ -47,7 +41,9 @@ func selectionSort(numbers: inout[Int])
             }
         }
         
-        
+        /* After finding that smallest element, the algorithm is going to insert that
+         number in the first position of the unsorted part.
+        */
         swap(numbers: &numbers, firstIndex: smallestElementIndex, secondIndex: i)
     }
 }
