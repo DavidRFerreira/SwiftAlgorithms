@@ -13,6 +13,7 @@ A collection of different algorithms written in Swift.
   - Quick Sort
   - Insertion Sort
   - Bubble Sort
+  - Selection Sort
   
 - ###### [Recursive Algorithms:](https://github.com/DavidRFerreira/SwiftAlgorithms/tree/master/recursiveAlgorithms)
   - Fibonacci Number
