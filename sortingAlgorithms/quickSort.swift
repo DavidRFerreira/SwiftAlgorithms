@@ -1,12 +1,26 @@
 // Quick Sort Algorithm
-// Picking Last Element as Pivot.
+
+/* This specific implementation picks the last element on the array.
+But for efficiency purposes you should consider picking the middle element
+or to calculate the median of the first, middle and last element.
+*/
+
 
 /* Description of the Algorithm:
         It is a Divide and Conquer Algorithm.
         There are many different versions of the Quick Sort that pick pivot in different ways.
  
-        Being x the pivot of an array (in the example bellow, x will always be the last element of the array), you put x at its correct position in sorted array and then putt all smaller elements before x and all greater elements after x.
+        Being x the pivot of an array (in the example bellow, x will always be the last element of the array), 
+        you put x at its correct position in sorted array and then putt all smaller elements before x and all greater 
+        elements after x.
 */
+
+/* There is also a variation where you don't only divide the numbers in two
+partions (numbers smaller than the pivot or numbers greater than the pivot), but
+you also add a third partion for numbers that are equal to the pivot. This can help
+making this algorithm stable.
+*/
+
 
 import Foundation
 
