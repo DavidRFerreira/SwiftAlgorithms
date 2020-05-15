@@ -94,7 +94,7 @@ func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 }
 
 
-
+// HeapSort's Main Function.
 func heapsort(numbers : inout[Int], n : Int)
 {
     var start : Int = n / 2 - 1
