@@ -10,10 +10,11 @@ A collection of different algorithms written in Swift.
   - Binary Search
 
 - ###### [Sorting Algorithms:](https://github.com/DavidRFerreira/SwiftAlgorithms/tree/master/sortingAlgorithms)
-  - Quick Sort
+  - Selection Sort
   - Insertion Sort
   - Bubble Sort
-  - Selection Sort
+  - Quick Sort
+  - Heap Sort
   
 - ###### [Recursive Algorithms:](https://github.com/DavidRFerreira/SwiftAlgorithms/tree/master/recursiveAlgorithms)
   - Fibonacci Number
