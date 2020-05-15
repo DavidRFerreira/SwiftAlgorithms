@@ -1,9 +1,9 @@
 // HeapSort Algorithm
 
 /* This sorting algorithm works by firstly inserting an unordered list on a heap and then by repeatedly
- * changing the first element with the last element on the heap and reducing the heaps' size by 1.
+ * changing the first element with the last element on the heap, reducing the heap's size by 1.
  * After this, the heap is reorganized (heapified) and the process is repeated.
- * HeapSort takes in the worst case scenario O(n lg n).
+ * HeapSort takes in the worst-case scenario O(n lg n).
  */
 
 /* For this specific implementation we use a Max-Heap (the root's key is
