@@ -1,24 +1,26 @@
 // Quick Sort Algorithm
 
-/* This specific implementation picks the last element on the array.
-But for efficiency purposes you should consider picking the middle element
-or to calculate the median of the first, middle and last element.
+/* This an is a Divide and Conquer Algorithm.
+ * It starts by picking an element of the array as the pivot. Then it divides the array in
+ * two subarrays (elements smaller than the pivot and elements greater than the pivot).
+ * Then, the quickSort algorithm calls itself recursively twice to sort the two resulting subarrays.
+ * There are many different versions of the Quick Sort that pick pivot in different ways.
+ *
+ * The worst-case scenario, takes O(n^2) time.
 */
 
-
-/* Description of the Algorithm:
-        It is a Divide and Conquer Algorithm.
-        There are many different versions of the Quick Sort that pick pivot in different ways.
- 
-        Being x the pivot of an array (in the example bellow, x will always be the last element of the array), 
-        you put x at its correct position in sorted array and then putt all smaller elements before x and all greater 
-        elements after x.
-*/
-
-/* There is also a variation where you don't only divide the numbers in two
-partions (numbers smaller than the pivot or numbers greater than the pivot), but
-you also add a third partion for numbers that are equal to the pivot. This can help
-making this algorithm stable.
+/* There are many different ways to implement this algorithm.
+ *
+ * This specific implementation always picks the last element of the array as the pivot.
+ * For efficiency purposes, you should consider picking the middle element or to calculate
+ * the median of the first, middle and last element and use it as the pivot.
+ *
+ * If you want to increse this algorithm's performance even more, you should switch for an
+ * algorithm like InsertionSort when the resulted subarray is very small (less than 7-10 items).
+ *
+ * In order to make this algorithm stable, you should consider divide the array not in two
+ * subarrays but in three: numbers smaller than the pivot, numbers greater than the pivot and
+ * numbers that are equal to the pivot.
 */
 
 
@@ -35,6 +37,7 @@ var partitionIndex: Int = 0
 //******** Auxiliary Functions ********
 //*************************************
 
+// Inserts random numbers into an array passed as an argument.
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
     for i in 0...sizeArray-1
@@ -44,6 +47,7 @@ func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 }
 
 
+// Iterates over the array passed as an argument and prints all its values.
 func printArrayNumbers(numbers: [Int])
 {
     for number in numbers
@@ -73,7 +77,7 @@ func quickSort(numbers: inout[Int], low: Int, high: Int)
         
         repeat
         {
-            //if the current number is smaller than the pivot, it is going to be put in the left side of the pivot in the array.
+            //if the current number is smaller than the pivot, it is going to be placed on the left side of the pivot.
             if (numbers[j] < pivot)
             {
                 i = i + 1
@@ -95,6 +99,7 @@ func quickSort(numbers: inout[Int], low: Int, high: Int)
 }
 
 
+// Swap the position of the items in the index passed as arguments.
 func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 {
     var numTemp : Int = 0
