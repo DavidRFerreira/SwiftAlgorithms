@@ -15,6 +15,11 @@ let sizeOfArray : Int = 20
 var partitionIndex: Int = 0
 
 
+
+//*************************************
+//******** Auxiliary Functions ********
+//*************************************
+
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
     for i in 0...sizeArray-1
@@ -32,6 +37,14 @@ func printArrayNumbers(numbers: [Int])
     }
 }
 
+
+
+
+
+
+//*************************************
+//******** QuickSort Functions ********
+//*************************************
 
 // low is the starting index of the array
 // high is the ending index of the array
@@ -80,7 +93,13 @@ func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 }
 
 
-//*** MAIN ***
+
+
+
+//**********************
+//******** MAIN ********
+//**********************
+
 var arrayNumbers = [Int](repeating: 0, count:sizeOfArray)
 
 populateArrayRandomly(sizeArray: sizeOfArray, numbers: &arrayNumbers)
