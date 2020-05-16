@@ -12,6 +12,11 @@ let sizeOfArray : Int = 20
 var partitionIndex: Int = 0
 
 
+
+//*************************************
+//******** Auxiliary Functions ********
+//*************************************
+
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
     for i in 0...sizeArray-1 { numbers[i] = Int.random(in: 0..<3000) }
@@ -23,6 +28,13 @@ func printArrayNumbers(numbers: [Int])
     for number in numbers { print(numbers) }
 }
 
+
+
+
+
+//*****************************************
+//******** SelectionSort Functions ********
+//*****************************************
 
 func selectionSort(numbers: inout[Int])
 {
@@ -60,7 +72,12 @@ func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 }
 
 
-//*** MAIN ***
+
+
+//**********************
+//******** MAIN ********
+//**********************
+
 var arrayNumbers = [Int](repeating: 0, count:sizeOfArray)
 
 populateArrayRandomly(sizeArray: sizeOfArray, numbers: &arrayNumbers)
