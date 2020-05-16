@@ -1,9 +1,15 @@
 // Bubble Sort Algorithm.
 
 /*
-This algorithm starts by comparing the first and second element of the array 
-and if the first is greater than the second element, it will swap both elements.
-Then, it compares the second and third element, and so on...
+ * This algorithm starts by comparing the first and the second element of the array 
+ * and if the first is greater than the second element, it will swap both elements.
+ * Then, it compares the second and the third element and again if the second element is
+ * greater than the third, it swaps both.
+ * In the end of every complete iteration over the array, we have one more element sorted in
+ * the end of it.
+ * In other words, this algorithms repeatedly swaps adjacent elements if they are in wrong order.
+ * 
+ * In the worst-case scenerio, this algorithm takes O(n^2) time.
  */
 
 import Foundation
@@ -46,13 +52,12 @@ func printArrayNumbers(numbers: [Int])
 //***************************************
 
 func bubbleSort(numbers: inout[Int], size : Int)
-{
-    
+{   
     for _ in 0...(size - 1)
     {
         for j in 1...(size - 1)
         {
-            if (numbers[j] < numbers[j - 1])
+            if (numbers[j] < numbers[j - 1]) // compares adjacent elements.
             {
                 swap(numbers: &numbers, firstIndex: j, secondIndex: j - 1)
             }
@@ -60,6 +65,7 @@ func bubbleSort(numbers: inout[Int], size : Int)
     }
 }
 
+// Swap the position of the items that are on the indexs passed as arguments.
 func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 {
     var numTemp : Int = 0
