@@ -20,6 +20,7 @@ var partitionIndex: Int = 0
 //******** Auxiliary Functions ********
 //*************************************
 
+// Inserts random numbers into an array passed as an argument.
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
     for i in 0...sizeArray-1
@@ -28,7 +29,7 @@ func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
     }
 }
 
-
+// Iterates over the array passed as an argument and prints all its values.
 func printArrayNumbers(numbers: [Int])
 {
     for number in numbers
