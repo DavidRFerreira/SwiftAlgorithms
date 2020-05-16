@@ -1,6 +1,16 @@
-// Algorithm For Calculating the Factorial of a Given Number.
+// Algorithm for calculating the factorial of a given number.
+
+/* Example: factorial(number: 4)
+ * 4! = 4 * 3 * 2 * 1 = 24
+ * Therefore, the output is going to be 24.
+*/ 
 
 import Foundation
+
+
+//***********************************************
+//******** Factorial Calculator Function ********
+//***********************************************
 
 func factorial(number : Int) -> Int
 {
@@ -14,8 +24,13 @@ func factorial(number : Int) -> Int
     }
 }
 
-//####### MAIN #######
-let numberToCalculate = 5 // change here.
+
+
+//**********************
+//******** MAIN ********
+//**********************
+
+let numberToCalculate = 5 
 
 print(factorial(number: numberToCalculate))
 
