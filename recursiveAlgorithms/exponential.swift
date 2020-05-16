@@ -2,7 +2,8 @@
 
 /* Example: exponential(base: 2, exponent: 2)
  * 2^2 = 2 * 2 = 4
-*/ Therefore, the output is going to be 4.
+ * Therefore, the output is going to be 4.
+*/ 
 
 import Foundation
 
