@@ -1,24 +1,23 @@
 // Binary Search Algorithm
 
-/* Description:
-        We start with the interval covering the whole array and
-        if the element we want to search is smaller than the item in the
-        middle of the interval, we narrow the interval to the lower half.
-        In the other hand, if the element is greater than the one in the middle
-        we narrow the interval to the upper half. We repeatedly check until the
-        value is found or the interval is empty.
+/* We start with the interval covering the whole array and if the element we want to search 
+ * is smaller than the item in the middle of the interval, we narrow the interval to the lower half.
+ * In the other hand, if the element is greater than the one in the middle we narrow the interval to
+ * the upper half. We repeatedly check until the value is found or the interval is empty.
  
-        It is required for the array to be sorted before starting the Binary Search Algorithm.
-        Therefore, in this file we also have two functions - quickSort and swap - responsible
-        to sort the elements of the array.
- 
+  * It is required for the array to be sorted before starting the Binary Search Algorithm. 
 */
+
+// In this specific implementation, we chose to use the Quick Sort algorithm, but you can use any other sorting algorith.
+
 
 import Foundation
 
-let numberToSearch : Int = 25 // change here if you want to search for other number.
-let sizeOfArray : Int = 20
-var partitionIndex : Int = 0
+
+
+//*************************************
+//******** Auxiliary Functions ********
+//*************************************
 
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
@@ -37,7 +36,22 @@ func printArrayNumbers(numbers: [Int])
     }
 }
 
-// this functions is going to sort the elements of the array.
+
+
+
+//************************************
+//******** Sorting Algorithm *********
+//************************************
+
+/* Because of the fact that the Binary Search Algorithm only works
+ * with sorted arrays, we need to use some kind of sorting algorithm
+ * to sort the array before beginning the search.
+ *
+ * In this case, we chose to use the Quick Sort Algorithm, but you can
+ * use any other sorting algorithm.
+*/
+
+// this function is going to sort the elements of the array.
 func quickSort(numbers: inout[Int], low: Int, high: Int)
 {
     
@@ -82,6 +96,11 @@ func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 }
 
 
+
+//****************************************
+//******** Binary Search Function ********
+//****************************************
+
 func binarySearch(numbers: inout[Int], numberToSearch: Int)
 {
     var m : Int = 0
@@ -113,7 +132,14 @@ func binarySearch(numbers: inout[Int], numberToSearch: Int)
 
 
 
-//*** MAIN ***
+//**********************
+//******** MAIN ********
+//**********************
+
+let numberToSearch : Int = 25 // the element we are going to search for.
+let sizeOfArray : Int = 20 // the number of items in the desired array.
+var partitionIndex : Int = 0
+
 var arrayNumbers = [Int](repeating: 0, count:sizeOfArray)
 
 populateArrayRandomly(sizeArray: sizeOfArray, numbers: &arrayNumbers)
