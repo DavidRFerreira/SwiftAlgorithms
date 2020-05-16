@@ -1,12 +1,12 @@
-// Quick Sort Algorithm
-// Picking Last Element as Pivot.
+// Insertion Sort Algorithm
 
-/* Description of the Algorithm:
-        It is a Divide and Conquer Algorithm.
-        There are many different versions of the Quick Sort that pick pivot in different ways.
- 
-        Being x the pivot of an array (in the example bellow, x will always be the last element of the array), you put x at its correct position in sorted array and then putt all smaller elements before x and all greater elements after x.
+/* This algorithm consumes one element (from the unsorted part of the array) each iteration 
+ * and places it in the right place of the sorted part of the array. This requires all elements
+ * on the right-side of the new position to be shifted one position to the right.
+ * 
+ * In the worst-case scenario, this algorithm takes O(n^2).
 */
+
 
 import Foundation
 
@@ -41,47 +41,26 @@ func printArrayNumbers(numbers: [Int])
 
 
 
-
-//*************************************
-//******** QuickSort Functions ********
-//*************************************
-
-// low is the starting index of the array
-// high is the ending index of the array
-func quickSort(numbers: inout[Int], low: Int, high: Int)
+//*****************************************
+//******** InsertionSort Functions ********
+//*****************************************
+func insertionSort(numbers: inout[Int])
 {
-
-    if (low < high)
-    {
-        // pivot is the partioning index and with which are going to "divide" the numbers.
-        let pivot : Int = numbers[high]
-        var i : Int = (low - 1)
-        var j : Int = low
-        
-        repeat
-        {
-            //if the current number is smaller than the pivot, it is going to be put in the left side of the pivot in the array.
-            if (numbers[j] < pivot)
-            {
-                i = i + 1
-                
-                swap(numbers: &numbers, firstIndex: i, secondIndex: j)
-            }
-            
-            j = j + 1
-            
-        } while (j <= high - 1)
-        
-        swap(numbers: &numbers, firstIndex: i+1, secondIndex: high)
-        
-        partitionIndex = i + 1
-        
-        quickSort(numbers: &numbers, low: low, high: partitionIndex - 1) // the numbers smaller than the partioning index.
-        quickSort(numbers: &numbers, low: partitionIndex + 1, high: high) // the numbers greater than the partioning index.
-    }
-}
+   // Find the right place for every element, one by one.
+   for x in 1..<numbers.count
+   {
+      var key = x // the index of the element for each we are now going to find the right place.
+      
+      while (key > 0 && x[key] < x[key - 1])
+      {
+         swap(numbers: &numbers, firstIndex: key-1, secondIndex: key)
+         y = y - 1
+      }
+   }
+}   
 
 
+// Swap the position of the items in the index passed as arguments.
 func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 {
     var numTemp : Int = 0
@@ -107,7 +86,7 @@ populateArrayRandomly(sizeArray: sizeOfArray, numbers: &arrayNumbers)
 print("Unsorted Array:")
 printArrayNumbers(numbers: arrayNumbers)
 
-quickSort(numbers: &arrayNumbers, low: 0, high: sizeOfArray - 1)
+insertionSort(numbers: &arrayNumbers, low: 0, high: sizeOfArray - 1)
 
 print("Sorted Array:")
 printArrayNumbers(numbers: arrayNumbers)
