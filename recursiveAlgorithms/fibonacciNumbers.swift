@@ -1,4 +1,6 @@
-// Algorithm For Calculating the nth number in the Fibonacci Sequence.
+/* Algorithm For Calculating the nth number in the Fibonacci Sequence.
+ * The Fibonacci Sequence is a series of numbers that begin with 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ....
+*/
 
 import Foundation
 
