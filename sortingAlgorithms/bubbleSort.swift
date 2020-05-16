@@ -13,6 +13,13 @@ let sizeOfArray : Int = 20
 var partitionIndex: Int = 0
 
 
+
+
+//*************************************
+//******** Auxiliary Functions ********
+//*************************************
+
+// Inserts random numbers into an array passed as an argument.
 func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
 {
     for i in 0...sizeArray-1
@@ -21,7 +28,7 @@ func populateArrayRandomly(sizeArray: Int, numbers: inout [Int])
     }
 }
 
-
+// Iterates over the array passed as an argument and prints all its values.
 func printArrayNumbers(numbers: [Int])
 {
     for number in numbers
@@ -30,6 +37,13 @@ func printArrayNumbers(numbers: [Int])
     }
 }
 
+
+
+
+
+//***************************************
+//******** Bubble Sort Functions ********
+//***************************************
 
 func bubbleSort(numbers: inout[Int], size : Int)
 {
@@ -57,7 +71,12 @@ func swap(numbers: inout[Int], firstIndex: Int, secondIndex: Int)
 }
 
 
-//*** MAIN ***
+
+
+//**********************
+//******** MAIN ********
+//**********************
+
 var arrayNumbers = [Int](repeating: 0, count:sizeOfArray)
 
 populateArrayRandomly(sizeArray: sizeOfArray, numbers: &arrayNumbers)
